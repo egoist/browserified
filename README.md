@@ -1,13 +1,16 @@
 # browserified
 
-[![NPM version](https://img.shields.io/npm/v/browserified.svg?style=flat)](https://npmjs.com/package/browserified) [![NPM downloads](https://img.shields.io/npm/dm/browserified.svg?style=flat)](https://npmjs.com/package/browserified) [![Build Status](https://img.shields.io/circleci/project/ream/browserified/master.svg?style=flat)](https://circleci.com/gh/ream/browserified) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/ream/donate)
+[![Build Status](https://img.shields.io/circleci/project/ream/browserified/master.svg?style=flat)](https://circleci.com/gh/ream/browserified) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/ream/donate)
 
 ## Available modules
 
 <!-- @modules start -->
-- [pug](https://npm.im/pug)
-- [postcss](https://npm.im/postcss)
-- [less](https://npm.im/less)
+|package|version|
+|---|---|
+|[pug](https://npm.im/pug)|![version](https://img.shields.io/npm/v/browserified-pug.svg)|
+|[postcss](https://npm.im/postcss)|![version](https://img.shields.io/npm/v/browserified-postcss.svg)|
+|[less](https://npm.im/less)|![version](https://img.shields.io/npm/v/browserified-less.svg)|
+
 <!-- @modules end -->
 
 ## Usage

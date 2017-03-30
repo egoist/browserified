@@ -4,7 +4,18 @@ const fs = require('fs-promise')
 const browserify = require('browserify')
 const uglify = require('uglify-js')
 const replaceSection = require('replace-section')
-const modules = require('./package.json').modules
+const minimost = require('minimost')
+
+const cli = minimost(process.argv.slice(2))
+let modules
+let isTemp
+
+if (cli.flags.name) {
+  isTemp = true
+  modules = [cli.flags] // --name foo --module-name Foo
+} else {
+  modules = require('./package.json').modules
+}
 
 const uglifyOptions = {
   fromString: true,
@@ -60,11 +71,32 @@ function updateREADME() {
         input: content,
         startWith: '<!-- @modules start -->',
         endWith: '<!-- @modules end -->',
-        replaceWith: `<!-- @modules start -->
-${modules.map(m => `- [${m.name}](https://npm.im/${m.name})`).join('\n')}
-<!-- @modules end -->`
+        replaceWith(_, p1) {
+          if (isTemp) {
+            const re = new RegExp(`^\\|\\[${cli.flags.name}\\]\\|`, 'm')
+            console.log(re, p1)
+            console.log(re.test(p1))
+            if (re.test(p1)) {
+              // is in readme already
+              return wrap(p1.trim())
+            }
+            // append
+            return wrap(`${p1.trim()}
+|[${cli.flags.name}](https://npm.im/${cli.flags.name})|![version](https://img.shields.io/npm/v/browserified-${cli.flags.name}.svg)|
+`)
+          }
+          return wrap(`|package|version|
+|---|---|
+${modules.map(m => `|[${m.name}](https://npm.im/${m.name})|![version](https://img.shields.io/npm/v/browserified-${m.name}.svg)|`).join('\n')}`)
+        }
       })
     }).then(content => {
       return fs.writeFile('./README.md', content, 'utf8')
     })
+}
+
+function wrap(str) {
+  return `<!-- @modules start -->
+${str}
+<!-- @modules end -->`
 }
