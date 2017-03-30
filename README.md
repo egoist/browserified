@@ -1,6 +1,6 @@
 # browserified
 
-[![Build Status](https://img.shields.io/circleci/project/ream/browserified/master.svg?style=flat)](https://circleci.com/gh/ream/browserified) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/ream/donate)
+[![Build Status](https://img.shields.io/circleci/project/egoist/browserified/master.svg?style=flat)](https://circleci.com/gh/egoist/browserified) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
 
 ## Available modules
 
@@ -44,7 +44,7 @@ You can use all these modules by prefixing `browserified-`.
 
 ## Author
 
-**browserified** © [ream](https://github.com/ream), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by ream with help from contributors ([list](https://github.com/ream/browserified/contributors)).
+**browserified** © [EGOIST](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by EGoIST with help from contributors ([list](https://github.com/egoist/browserified/contributors)).
 
-> [egoistian.com](https://egoistian.com) · GitHub [@ream](https://github.com/ream) · Twitter [@rem_rin_rin](https://twitter.com/rem_rin_rin)
+> [egoistian.com](https://egoistian.com) · GitHub [@egoist](https://github.com/egoist) · Twitter [@rem_rin_rin](https://twitter.com/rem_rin_rin)
