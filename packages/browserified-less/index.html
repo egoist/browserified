@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>less</title>
+</head>
+<body>
+<script src="./index.js"></script>
+<script>
+  less.render('.class { width: (1 + 1) }', (e, res) => {
+    console.log(res.css)
+  })
+</script>
+</body>
+</html>

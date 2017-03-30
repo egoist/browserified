@@ -1,0 +1,10 @@
+{
+  "name": "browserified-less",
+  "version": "0.0.0",
+  "description": "Browserified Less",
+  "main": "index.js",
+  "repository": "egoist/browserified",
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT",
+  "files": ["index.js"]
+}

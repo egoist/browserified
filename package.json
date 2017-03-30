@@ -1,0 +1,51 @@
+{
+  "name": "browserified",
+  "version": "0.0.0",
+  "description": "Browserified npm packages.",
+  "repository": {
+    "url": "ream/browserified",
+    "type": "git"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "xo build.js",
+    "build": "node ./build"
+  },
+  "author": "ream <0x142857@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "modules": [{
+    "name": "pug"
+  }, {
+    "name": "postcss"
+  }, {
+    "name": "less"
+  }],
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "envify": "^4.0.0",
+    "eslint-config-rem": "^3.0.0",
+    "fs-promise": "^2.0.2",
+    "lerna": "2.0.0-beta.38",
+    "less": "^2.7.2",
+    "postcss": "^5.2.16",
+    "pug": "^2.0.0-beta11",
+    "replace-section": "^1.0.0",
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.8.18",
+    "uglifyify": "^3.0.4",
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "extends": "rem",
+    "esnext": true,
+    "envs": [
+      "jest"
+    ],
+    "rules": {
+      "camelcase": 0
+    }
+  }
+}
