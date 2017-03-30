@@ -82,12 +82,11 @@ function updateREADME() {
             }
             // append
             return wrap(`${p1.trim()}
-|[${cli.flags.name}](https://npm.im/${cli.flags.name})|![version](https://img.shields.io/npm/v/browserified-${cli.flags.name}.svg)|
-`)
+${formatTable(cli.flags.name)}`)
           }
           return wrap(`|package|version|
 |---|---|
-${modules.map(m => `|[${m.name}](https://npm.im/${m.name})|![version](https://img.shields.io/npm/v/browserified-${m.name}.svg)|`).join('\n')}`)
+${modules.map(m => formatTable(m.name)).join('\n')}`)
         }
       })
     }).then(content => {
@@ -99,4 +98,8 @@ function wrap(str) {
   return `<!-- @modules start -->
 ${str}
 <!-- @modules end -->`
+}
+
+function formatTable(name) {
+  return `|[${name}](https://npm.im/${name})|[![version](https://img.shields.io/npm/v/browserified-${name}.svg)](https://npm.im/browserified-${name})|`
 }

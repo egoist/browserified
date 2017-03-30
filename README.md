@@ -7,10 +7,9 @@
 <!-- @modules start -->
 |package|version|
 |---|---|
-|[pug](https://npm.im/pug)|![version](https://img.shields.io/npm/v/browserified-pug.svg)|
-|[postcss](https://npm.im/postcss)|![version](https://img.shields.io/npm/v/browserified-postcss.svg)|
-|[less](https://npm.im/less)|![version](https://img.shields.io/npm/v/browserified-less.svg)|
-
+|[pug](https://npm.im/pug)|[![version](https://img.shields.io/npm/v/browserified-pug.svg)](https://npm.im/browserified-pug)|
+|[postcss](https://npm.im/postcss)|[![version](https://img.shields.io/npm/v/browserified-postcss.svg)](https://npm.im/browserified-postcss)|
+|[less](https://npm.im/less)|[![version](https://img.shields.io/npm/v/browserified-less.svg)](https://npm.im/browserified-less)|
 <!-- @modules end -->
 
 ## Usage
