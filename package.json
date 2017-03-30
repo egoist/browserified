@@ -25,6 +25,10 @@
     },
     {
       "name": "less"
+    },
+    {
+      "name": "postcss-cssnext",
+      "moduleName": "cssnext"
     }
   ],
   "devDependencies": {
@@ -36,6 +40,7 @@
     "less": "^2.7.2",
     "minimost": "^1.0.0",
     "postcss": "^5.2.16",
+    "postcss-cssnext": "^2.10.0",
     "pug": "^2.0.0-beta11",
     "replace-section": "^1.0.0",
     "stylus": "^0.54.5",

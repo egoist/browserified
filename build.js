@@ -74,8 +74,6 @@ function updateREADME() {
         replaceWith(_, p1) {
           if (isTemp) {
             const re = new RegExp(`^\\|\\[${cli.flags.name}\\]\\|`, 'm')
-            console.log(re, p1)
-            console.log(re.test(p1))
             if (re.test(p1)) {
               // is in readme already
               return wrap(p1.trim())
