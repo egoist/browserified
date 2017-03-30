@@ -1,10 +1,12 @@
 {
   "name": "browserified-pug",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Browserified Pug",
   "main": "index.js",
   "repository": "egoist/browserified",
   "author": "EGOIST <0x142857@gmail.com>",
   "license": "MIT",
-  "files": ["index.js"]
+  "files": [
+    "index.js"
+  ]
 }
