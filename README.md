@@ -11,6 +11,7 @@
 |[postcss](https://npm.im/postcss)|[![version](https://img.shields.io/npm/v/browserified-postcss.svg)](https://npm.im/browserified-postcss)|
 |[less](https://npm.im/less)|[![version](https://img.shields.io/npm/v/browserified-less.svg)](https://npm.im/browserified-less)|
 |[postcss-cssnext](https://npm.im/postcss-cssnext)|[![version](https://img.shields.io/npm/v/browserified-postcss-cssnext.svg)](https://npm.im/browserified-postcss-cssnext)|
+|[buble](https://npm.im/buble)|[![version](https://img.shields.io/npm/v/browserified-buble.svg)](https://npm.im/browserified-buble)|
 <!-- @modules end -->
 
 ## Usage
