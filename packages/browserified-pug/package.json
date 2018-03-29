@@ -1,6 +1,6 @@
 {
   "name": "browserified-pug",
-  "version": "2.0.3",
+  "version": "0.3.0",
   "description": "Browserified Pug",
   "main": "index.js",
   "repository": "egoist/browserified",

@@ -1,6 +1,6 @@
 {
   "name": "browserified-postcss",
-  "version": "6.0.21",
+  "version": "0.3.0",
   "description": "Browserified PostCss",
   "main": "index.js",
   "repository": "egoist/browserified",

@@ -1,6 +1,6 @@
 {
   "name": "browserified-less",
-  "version": "3.0.1",
+  "version": "0.3.0",
   "description": "Browserified Less",
   "main": "index.js",
   "repository": "egoist/browserified",
