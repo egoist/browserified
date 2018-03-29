@@ -32,22 +32,30 @@
     },
     {
       "name": "buble"
+    },
+    {
+      "name": "typescript",
+      "ignore": [
+        "source-map-support"
+      ]
     }
   ],
   "devDependencies": {
     "browserify": "^14.1.0",
-    "buble": "^0.15.2",
+    "buble": "^0.19.3",
     "envify": "^4.0.0",
     "eslint-config-rem": "^3.0.0",
     "fs-promise": "^2.0.2",
     "lerna": "2.0.0-beta.38",
-    "less": "^2.7.2",
+    "less": "^3.0.1",
     "minimost": "^1.0.0",
-    "postcss": "^5.2.16",
-    "postcss-cssnext": "^2.10.0",
-    "pug": "^2.0.0-beta11",
+    "postcss": "^6.0.21",
+    "postcss-cssnext": "^3.1.0",
+    "pug": "^2.0.3",
     "replace-section": "^1.0.0",
+    "source-map-support": "^0.5.4",
     "stylus": "^0.54.5",
+    "typescript": "^2.8.1",
     "uglify-js": "^2.8.18",
     "uglifyify": "^3.0.4",
     "xo": "^0.17.1"

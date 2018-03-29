@@ -1,0 +1,8 @@
+{
+  "name": "browserified-typescript",
+  "version": "2.8.1",
+  "files": ["index.js"],
+  "repository": "egoist/browserified",
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT"
+}

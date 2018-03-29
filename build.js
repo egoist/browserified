@@ -45,6 +45,10 @@ Promise.all(modules.map(m => {
       standalone: moduleName
     })
 
+    if (m.ignore) {
+      b.ignore(m.ignore)
+    }
+
     b.bundle((err, buf) => {
       if (err) return reject(err)
       resolve(uglify.minify(buf.toString(), uglifyOptions).code)
