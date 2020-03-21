@@ -1,6 +1,6 @@
 {
   "name": "browserified-buble",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Browserified Buble",
   "main": "index.js",
   "repository": "egoist/browserified",
