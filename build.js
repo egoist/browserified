@@ -2,7 +2,7 @@
 const path = require('path')
 const fs = require('fs-promise')
 const browserify = require('browserify')
-const uglify = require('uglify-js')
+const Terser = require('terser')
 const replaceSection = require('replace-section')
 const minimost = require('minimost')
 
@@ -18,8 +18,7 @@ if (cli.flags.name) {
 }
 
 const uglifyOptions = {
-  fromString: true,
-  compressor: {
+  compress: {
     warnings: false,
     conditionals: true,
     unused: true,
@@ -36,40 +35,61 @@ const uglifyOptions = {
   }
 }
 
-Promise.all(modules.map(m => {
-  const name = m.name
-  const moduleName = m.moduleName || m.name
-  console.log(`> Browserifing ${name}`)
-  const pipe = new Promise((resolve, reject) => {
-    const b = browserify([require.resolve(name)], {
-      standalone: moduleName
-    })
+Promise.all(
+  modules.map(m => {
+    const name = m.name
+    const moduleName = m.moduleName || m.name
+    console.log(`> Browserifing ${name}`)
+    const pipe = new Promise((resolve, reject) => {
+      const b = browserify([require.resolve(name)], {
+        standalone: moduleName
+      })
 
-    if (m.ignore) {
-      b.ignore(m.ignore)
-    }
+      if (m.ignore) {
+        b.ignore(m.ignore)
+      }
 
-    b.bundle((err, buf) => {
-      if (err) return reject(err)
-      resolve(uglify.minify(buf.toString(), uglifyOptions).code)
+      b.bundle((err, buf) => {
+        if (err) return reject(err)
+        try {
+          const result = Terser.minify(buf.toString(), uglifyOptions)
+          if (result.error) {
+            throw result.error
+          }
+          resolve(result.code)
+        } catch (err) {
+          console.error(`Error minifying ${name}`)
+          reject(err)
+        }
+      })
     })
+    return pipe
+      .then(string => {
+        const outFile = path.join(
+          __dirname,
+          `packages/browserified-${name}/index.js`
+        )
+        return fs
+          .ensureDir(path.dirname(outFile))
+          .then(() => fs.writeFile(outFile, string, 'utf8'))
+      })
+      .then(() => {
+        console.log(`> Browserified ${name}`)
+      })
+      .then(() => updateREADME())
   })
-  return pipe.then(string => {
-    const outFile = path.join(__dirname, `packages/browserified-${name}/index.js`)
-    return fs.ensureDir(path.dirname(outFile))
-      .then(() => fs.writeFile(outFile, string, 'utf8'))
-  }).then(() => {
-    console.log(`> Browserified ${name}`)
-  }).then(() => updateREADME())
-})).then(() => {
-  console.log('Done!')
-}).catch(err => {
-  console.error(err.stack)
-  process.exit(1)
-})
+)
+  .then(() => {
+    console.log('Done!')
+  })
+  .catch(err => {
+    console.error(err.stack)
+    process.exit(1)
+  })
 
 function updateREADME() {
-  return fs.readFile('./README.md', 'utf8')
+  return fs
+    .readFile('./README.md', 'utf8')
     .then(content => {
       return replaceSection({
         input: content,
@@ -91,7 +111,8 @@ ${formatTable(cli.flags.name)}`)
 ${modules.map(m => formatTable(m.name)).join('\n')}`)
         }
       })
-    }).then(content => {
+    })
+    .then(content => {
       return fs.writeFile('./README.md', content, 'utf8')
     })
 }
