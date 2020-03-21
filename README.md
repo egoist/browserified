@@ -7,12 +7,12 @@
 <!-- @modules start -->
 |package|version|
 |---|---|
-|[pug](https://npm.im/pug)|[![version](https://img.shields.io/npm/v/browserified-pug.svg)](https://npm.im/browserified-pug)|
-|[postcss](https://npm.im/postcss)|[![version](https://img.shields.io/npm/v/browserified-postcss.svg)](https://npm.im/browserified-postcss)|
-|[less](https://npm.im/less)|[![version](https://img.shields.io/npm/v/browserified-less.svg)](https://npm.im/browserified-less)|
-|[postcss-cssnext](https://npm.im/postcss-cssnext)|[![version](https://img.shields.io/npm/v/browserified-postcss-cssnext.svg)](https://npm.im/browserified-postcss-cssnext)|
-|[buble](https://npm.im/buble)|[![version](https://img.shields.io/npm/v/browserified-buble.svg)](https://npm.im/browserified-buble)|
-|[typescript](https://npm.im/typescript)|[![version](https://img.shields.io/npm/v/browserified-typescript.svg)](https://npm.im/browserified-typescript)|
+|[pug](https://npm.im/pug)|[![version](https://img.shields.io/npm/v/@browserified/pug.svg)](https://npm.im/@browserified/pug)|
+|[postcss](https://npm.im/postcss)|[![version](https://img.shields.io/npm/v/@browserified/postcss.svg)](https://npm.im/@browserified/postcss)|
+|[less](https://npm.im/less)|[![version](https://img.shields.io/npm/v/@browserified/less.svg)](https://npm.im/@browserified/less)|
+|[postcss-cssnext](https://npm.im/postcss-cssnext)|[![version](https://img.shields.io/npm/v/@browserified/postcss-cssnext.svg)](https://npm.im/@browserified/postcss-cssnext)|
+|[buble](https://npm.im/buble)|[![version](https://img.shields.io/npm/v/@browserified/buble.svg)](https://npm.im/@browserified/buble)|
+|[typescript](https://npm.im/typescript)|[![version](https://img.shields.io/npm/v/@browserified/typescript.svg)](https://npm.im/@browserified/typescript)|
 <!-- @modules end -->
 
 ## Usage
@@ -20,7 +20,7 @@
 These modules are bundled in UMD format, for example:
 
 ```html
-<script src="https://unpkg.com/browserified-pug"></script>
+<script src="https://unpkg.com/@browserified/pug"></script>
 
 <script>
   pug.render('#id content')
@@ -30,10 +30,9 @@ These modules are bundled in UMD format, for example:
 You can still use it as CommonJS module:
 
 ```js
-const pug = require('browserified-pug')
+const pug = require('@browserified/pug')
 ```
-
-You can use all these modules by prefixing `browserified-`.
+All browserified modules are published under `@browserified` org.
 
 ## Contributing
 

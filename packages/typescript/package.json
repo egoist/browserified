@@ -1,9 +1,12 @@
 {
-  "name": "browserified-typescript",
+  "name": "@browserified/typescript",
   "version": "0.4.0",
   "files": [
     "index.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "egoist/browserified",
   "author": "EGOIST <0x142857@gmail.com>",
   "license": "MIT"

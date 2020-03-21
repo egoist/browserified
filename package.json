@@ -1,9 +1,10 @@
 {
+  "private": true,
   "name": "browserified",
   "version": "0.0.0",
   "description": "Browserified npm packages.",
   "repository": {
-    "url": "ream/browserified",
+    "url": "egoist/browserified",
     "type": "git"
   },
   "scripts": {
@@ -11,7 +12,7 @@
     "lint": "xo build.js",
     "build": "node ./build"
   },
-  "author": "ream <0x142857@gmail.com>",
+  "author": "EGOIST <0x142857@gmail.com>",
   "license": "MIT",
   "jest": {
     "testEnvironment": "node"

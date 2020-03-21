@@ -67,7 +67,7 @@ Promise.all(
       .then(string => {
         const outFile = path.join(
           __dirname,
-          `packages/browserified-${name}/index.js`
+          `packages/${name}/index.js`
         )
         return fs
           .ensureDir(path.dirname(outFile))
@@ -124,5 +124,5 @@ ${str}
 }
 
 function formatTable(name) {
-  return `|[${name}](https://npm.im/${name})|[![version](https://img.shields.io/npm/v/browserified-${name}.svg)](https://npm.im/browserified-${name})|`
+  return `|[${name}](https://npm.im/${name})|[![version](https://img.shields.io/npm/v/@browserified/${name}.svg)](https://npm.im/@browserified/${name})|`
 }

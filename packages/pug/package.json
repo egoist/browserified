@@ -1,12 +1,15 @@
 {
-  "name": "browserified-postcss-cssnext",
+  "name": "@browserified/pug",
   "version": "0.4.0",
-  "description": "Browserified PostCSS cssnext",
+  "description": "Browserified Pug",
   "main": "index.js",
   "repository": "egoist/browserified",
   "author": "EGOIST <0x142857@gmail.com>",
   "license": "MIT",
   "files": [
     "index.js"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
