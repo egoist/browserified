@@ -48,4 +48,4 @@ All browserified modules are published under `@browserified` org.
 **browserified** © [EGOIST](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by EGoIST with help from contributors ([list](https://github.com/egoist/browserified/contributors)).
 
-> [egoistian.com](https://egoistian.com) · GitHub [@egoist](https://github.com/egoist) · Twitter [@_egoistlily](https://twitter.com/_egoistlily)
+> [egoist.sh](https://egoist.sh) · GitHub [@egoist](https://github.com/egoist) · Twitter [@_egoistlily](https://twitter.com/_egoistlily)
