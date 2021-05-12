@@ -50,7 +50,7 @@
     "lerna": "3.20.2",
     "less": "^3.11.1",
     "minimost": "^1.0.0",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "postcss-cssnext": "^3.1.0",
     "pug": "^2.0.4",
     "replace-section": "^1.0.0",
